@@ -1,0 +1,73 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "renpy/common/00action_other.rpy", line 582, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/characters.rpy", line 75, in attribute_up
+    att_name_up = self.att_name_str # Assign our variable to equal to the character's attribute
+AttributeError: 'Character_Sheet' object has no attribute 'att_name_str'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\core.py", line 3278, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\transition.py", line 53, in event
+    return self.new_widget.event(ev, x, y, st) # E1101
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 1523, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 288, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\viewport.py", line 587, in event
+    rv = super(Viewport, self).event(ev, x, y, st)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 288, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  [Previous line repeated 2 more times]
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\behavior.py", line 1180, in event
+    return handle_click(self.clicked)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\behavior.py", line 1101, in handle_click
+    rv = run(action)
+  File "C:\Program Files (x86)\renpy-8.3.2-sdk\renpy-8.3.2-sdk\renpy\display\behavior.py", line 401, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 582, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/characters.rpy", line 75, in attribute_up
+    att_name_up = self.att_name_str # Assign our variable to equal to the character's attribute
+AttributeError: 'Character_Sheet' object has no attribute 'att_name_str'
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.2.24090902
+OpenLegends 1.0
+Fri Dec 20 11:45:59 2024
